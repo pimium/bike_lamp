@@ -1,0 +1,210 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R2
+U 1 1 65E9CE5B
+P 4800 3850
+F 0 "R2" H 4870 3896 50  0000 L CNN
+F 1 "10R" H 4870 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4730 3850 50  0001 C CNN
+F 3 "~" H 4800 3850 50  0001 C CNN
+	1    4800 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 65E9CFFA
+P 4800 2550
+F 0 "D2" V 4839 2433 50  0000 R CNN
+F 1 "LED" V 4748 2433 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 4800 2550 50  0001 C CNN
+F 3 "~" H 4800 2550 50  0001 C CNN
+	1    4800 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 65E9D5BF
+P 4150 2550
+F 0 "R4" H 4220 2596 50  0000 L CNN
+F 1 "10k" H 4220 2505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4080 2550 50  0001 C CNN
+F 3 "~" H 4150 2550 50  0001 C CNN
+	1    4150 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode_Bridge:MB6S D1
+U 1 1 65E9DBBF
+P 2700 2800
+F 0 "D1" V 2950 2600 50  0000 R CNN
+F 1 "MB6S" V 2850 2600 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:TO-269AA" H 2850 2925 50  0001 L CNN
+F 3 "http://www.vishay.com/docs/88573/dfs.pdf" H 2700 2800 50  0001 C CNN
+	1    2700 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 65E9EAA1
+P 4800 2050
+F 0 "#PWR01" H 4800 1900 50  0001 C CNN
+F 1 "VCC" H 4817 2223 50  0000 C CNN
+F 2 "" H 4800 2050 50  0001 C CNN
+F 3 "" H 4800 2050 50  0001 C CNN
+	1    4800 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4400 4800 4200
+Wire Wire Line
+	4800 3000 4800 2700
+Wire Wire Line
+	4800 2400 4800 2200
+Wire Wire Line
+	4800 2200 4150 2200
+Wire Wire Line
+	4150 2200 4150 2400
+Connection ~ 4800 2200
+Wire Wire Line
+	4800 2200 4800 2050
+Wire Wire Line
+	4150 3200 4150 2700
+Wire Wire Line
+	2700 3100 2700 4200
+Wire Wire Line
+	2700 4200 3650 4200
+Connection ~ 4800 4200
+Wire Wire Line
+	4800 4200 4800 4000
+Wire Wire Line
+	4150 3200 4500 3200
+Connection ~ 4150 2200
+$Comp
+L Device:CP C1
+U 1 1 65EA27A8
+P 3650 3100
+F 0 "C1" H 3768 3146 50  0000 L CNN
+F 1 "CP" H 3768 3055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 3688 2950 50  0001 C CNN
+F 3 "~" H 3650 3100 50  0001 C CNN
+	1    3650 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3250 3650 4200
+$Comp
+L power:GND #PWR02
+U 1 1 65EA0D4C
+P 4800 4400
+F 0 "#PWR02" H 4800 4150 50  0001 C CNN
+F 1 "GND" H 4805 4227 50  0000 C CNN
+F 2 "" H 4800 4400 50  0001 C CNN
+F 3 "" H 4800 4400 50  0001 C CNN
+	1    4800 4400
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 4200
+Wire Wire Line
+	2700 2200 3650 2200
+Connection ~ 3650 2200
+Wire Wire Line
+	3650 2200 3650 2950
+Wire Wire Line
+	2700 2200 2700 2500
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 65F3A3FF
+P 1550 2900
+F 0 "J1" H 1468 2575 50  0000 C CNN
+F 1 "PWR" H 1468 2666 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 1550 2900 50  0001 C CNN
+F 3 "~" H 1550 2900 50  0001 C CNN
+	1    1550 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 2800 1750 2800
+Wire Wire Line
+	2150 3200 3150 3200
+Wire Wire Line
+	3150 3200 3150 2800
+Wire Wire Line
+	3150 2800 3000 2800
+Wire Wire Line
+	1750 2900 2150 2900
+Wire Wire Line
+	2150 2900 2150 3200
+Wire Wire Line
+	4800 3400 4800 3500
+$Comp
+L Device:R R1
+U 1 1 65F3697B
+P 4500 3850
+F 0 "R1" H 4570 3896 50  0000 L CNN
+F 1 "10R" H 4570 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4430 3850 50  0001 C CNN
+F 3 "~" H 4500 3850 50  0001 C CNN
+	1    4500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 65F36B64
+P 5100 3850
+F 0 "R3" H 5170 3896 50  0000 L CNN
+F 1 "10R" H 5170 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5030 3850 50  0001 C CNN
+F 3 "~" H 5100 3850 50  0001 C CNN
+	1    5100 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4200 4500 4200
+Wire Wire Line
+	3650 2200 4150 2200
+Wire Wire Line
+	4800 3500 4500 3500
+Wire Wire Line
+	4500 3500 4500 3700
+Connection ~ 4800 3500
+Wire Wire Line
+	4800 3500 4800 3700
+Wire Wire Line
+	5100 3700 5100 3500
+Wire Wire Line
+	5100 3500 4800 3500
+Wire Wire Line
+	4800 4200 5100 4200
+Wire Wire Line
+	5100 4200 5100 4000
+Wire Wire Line
+	4500 4000 4500 4200
+Connection ~ 4500 4200
+Wire Wire Line
+	4500 4200 4800 4200
+$Comp
+L Transistor_BJT:BD137 Q1
+U 1 1 65F41962
+P 4700 3200
+F 0 "Q1" H 4892 3246 50  0000 L CNN
+F 1 "BD137" H 4892 3155 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-126-3_Vertical" H 4900 3125 50  0001 L CIN
+F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf" H 4700 3200 50  0001 L CNN
+	1    4700 3200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
