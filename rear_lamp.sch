@@ -25,17 +25,6 @@ F 3 "~" H 7200 3850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Diode_Bridge:MB6S D3
-U 1 1 65E9DBBF
-P 2700 2800
-F 0 "D3" V 2950 2600 50  0000 R CNN
-F 1 "MB6S" V 2850 2600 50  0000 R CNN
-F 2 "Package_TO_SOT_SMD:TO-269AA" H 2850 2925 50  0001 L CNN
-F 3 "http://www.vishay.com/docs/88573/dfs.pdf" H 2700 2800 50  0001 C CNN
-	1    2700 2800
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:VCC #PWR01
 U 1 1 65E9EAA1
 P 3650 1950
@@ -51,10 +40,6 @@ Wire Wire Line
 Wire Wire Line
 	3650 2100 3650 1950
 Wire Wire Line
-	2700 3100 2700 4200
-Wire Wire Line
-	2700 4200 3650 4200
-Wire Wire Line
 	4250 4200 4250 4000
 $Comp
 L Device:CP C1
@@ -62,7 +47,7 @@ U 1 1 65EA27A8
 P 3650 3100
 F 0 "C1" H 3768 3146 50  0000 L CNN
 F 1 "CP" H 3768 3055 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 3688 2950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P12.50mm_Horizontal" H 3688 2950 50  0001 C CNN
 F 3 "~" H 3650 3100 50  0001 C CNN
 	1    3650 3100
 	1    0    0    -1  
@@ -83,26 +68,16 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 65F3A3FF
-P 1550 2900
-F 0 "J1" H 1468 2575 50  0000 C CNN
-F 1 "PWR" H 1468 2666 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 1550 2900 50  0001 C CNN
-F 3 "~" H 1550 2900 50  0001 C CNN
-	1    1550 2900
+P 2850 3150
+F 0 "J1" H 2768 2825 50  0000 C CNN
+F 1 "PWR" H 2768 2916 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 2850 3150 50  0001 C CNN
+F 3 "~" H 2850 3150 50  0001 C CNN
+	1    2850 3150
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2400 2800 1750 2800
-Wire Wire Line
-	2150 3200 3150 3200
-Wire Wire Line
-	3150 3200 3150 2800
-Wire Wire Line
-	3150 2800 3000 2800
-Wire Wire Line
-	1750 2900 2150 2900
-Wire Wire Line
-	2150 2900 2150 3200
+	3050 3150 3450 3150
 $Comp
 L Device:R R31
 U 1 1 65F3697B
@@ -152,11 +127,7 @@ Wire Wire Line
 	3650 2100 4650 2100
 Wire Wire Line
 	5500 2100 5500 2200
-Wire Wire Line
-	3650 2100 2700 2100
 Connection ~ 3650 2100
-Wire Wire Line
-	2700 2100 2700 2500
 Wire Wire Line
 	3650 2100 3650 2950
 Wire Wire Line
@@ -222,7 +193,7 @@ U 1 1 65FE09D8
 P 5950 3200
 F 0 "L1" V 6140 3200 50  0000 C CNN
 F 1 "47u" V 6049 3200 50  0000 C CNN
-F 2 "Inductor_SMD:L_Coilcraft_XAL60xx_6.36x6.56mm" H 5950 3200 50  0001 C CNN
+F 2 "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm" H 5950 3200 50  0001 C CNN
 F 3 "~" H 5950 3200 50  0001 C CNN
 	1    5950 3200
 	0    -1   -1   0   
@@ -234,7 +205,7 @@ U 1 1 65FE47BB
 P 5500 3850
 F 0 "D1" V 5454 3929 50  0000 L CNN
 F 1 "D_Schottky" V 5545 3929 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 5500 3850 50  0001 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" H 5500 3850 50  0001 C CNN
 F 3 "~" H 5500 3850 50  0001 C CNN
 	1    5500 3850
 	0    1    1    0   
@@ -335,4 +306,14 @@ Wire Wire Line
 	7200 3200 7200 3700
 Wire Wire Line
 	7200 4000 7200 4400
+Wire Wire Line
+	3050 3050 3450 3050
+Wire Wire Line
+	3450 2100 3650 2100
+Wire Wire Line
+	3450 2100 3450 3050
+Wire Wire Line
+	3450 4200 3650 4200
+Wire Wire Line
+	3450 3150 3450 4200
 $EndSCHEMATC
